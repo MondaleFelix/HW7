@@ -51,4 +51,43 @@ print(is_pow(20))
 #  2			x/2
 #  3			x/2
 
+# Input: [Int]
+# Output: Int
+# Test Case:
+# Input: [1,1,1,0,0,1,1]
+# Output: 3
+
+
+def longest_ones(arr):
+	counter = 0
+	ones = []
+
+	for i in arr:
+		if i == 1:
+			counter += 1
+		else:
+			ones.append(counter)
+			counter = 0
+
+	return max(ones)
+
+
+print(longest_ones([1,1,1,0,0,1,1]))
+
+
+# Variable Table
+
+
+#  Iteration	counter		ones	
+#  1			0			[]
+#  2			1			[]
+#  3			2			[]
+#  4			3			[]
+#  5 			0			[3]
+#  6 			0			[3]
+#  7			1			[3]
+#  8			2			[3]
+
+
+
 
